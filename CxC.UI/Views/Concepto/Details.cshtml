@@ -1,0 +1,74 @@
+﻿@model CxC.Datos.FCCxCConcepto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>Concepto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdConcepto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdConcepto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DscTipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DscTipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodEstado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodEstado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CtaContable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CtaContable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsarExpiracion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsarExpiracion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumDiasExpira)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumDiasExpira)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnviaNotificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnviaNotificacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new {  id = Model.IdConcepto  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,101 @@
+﻿@model CxC.Datos.FCCxCBoSPrecio
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Borrar</h2>
+
+<h3>Esta seguro que desea borrar este registro?</h3>
+<div>
+    <h4>Bien o Servicio Precio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdBoSPrecio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdBoSPrecio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdBoS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdBoS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonPrecio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonPrecio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonCosto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonCosto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumPeriodo)
+        </dt>
+
+        <dd>
+            @*@Html.DisplayFor(model => model.NumPeriodo)*@
+            @{
+                List<CxC.Datos.FCCxCPeriodo> periodo = ViewBag.Periodo;
+                string dscPeriodo = periodo.FirstOrDefault(a => a.IdPeriodo == Model.NumPeriodo).DscPeriodo.ToString();
+            }
+            @Html.Label(dscPeriodo)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.FecCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FecCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsrCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsrCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FecUltModif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FecUltModif)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsrUltModif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsrUltModif)
+        </dd>*@
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,147 @@
+﻿@model CxC.Datos.FCCxCSocio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Socio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Id_Socio)
+        </dt>*@
+
+        @*<dd>
+            @Html.DisplayFor(model => model.Id_Socio)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_Identificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_Identificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_TipoIdentif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_TipoIdentif)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_Identificacion2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_Identificacion2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dsc_NombreSocio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dsc_NombreSocio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dsc_NombreSocio2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dsc_NombreSocio2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_TipoSocio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_TipoSocio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email_Socio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email_Socio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.num_CelularSocio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_CelularSocio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.num_TelefonoSocio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_TelefonoSocio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dsc_Info1Socio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dsc_Info1Socio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dsc_Info2Socio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dsc_Info2Socio)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Fec_Creacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fec_Creacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usr_Creacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usr_Creacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fec_UltModif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fec_UltModif)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usr_UltModif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usr_UltModif)
+        </dd>*@
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
+    @Html.ActionLink("Guardar cambios", "Edit", new { /* id = Model.PrimaryKey */ }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-default" })
+</p>

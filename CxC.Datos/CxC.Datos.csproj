@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D22012B-0CC0-406B-8316-2D4D62F23DAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CxC.Datos</RootNamespace>
+    <AssemblyName>CxC.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CxCModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CxCModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CxCModel.cs" />
+    <Compile Include="CxCModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CxCModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CxCModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATOS_ActiEconomica.cs" />
+    <Compile Include="DATOS_Auxiliar.cs" />
+    <Compile Include="DATOS_BienoServicio.cs" />
+    <Compile Include="DATOS_BoSPrecio.cs" />
+    <Compile Include="DATOS_StoreProc.cs" />
+    <Compile Include="DATOS_Concepto.cs" />
+    <Compile Include="DATOS_EstadoPago.cs" />
+    <Compile Include="DATOS_FormaPago.cs" />
+    <Compile Include="DATOS_IdentificacionTipo.cs" />
+    <Compile Include="DATOS_Maestro.cs" />
+    <Compile Include="DATOS_MovimientoCuenta.cs" />
+    <Compile Include="DATOS_Periodo.cs" />
+    <Compile Include="DATOS_Socio.cs" />
+    <Compile Include="DATOS_SocioTipo.cs" />
+    <Compile Include="DATOS_Estado.cs" />
+    <Compile Include="DATOS_ImporteIVA.cs" />
+    <Compile Include="DATOS_TipoCambio.cs" />
+    <Compile Include="DATOS_TiposImpuestos.cs" />
+    <Compile Include="FCCxCActiEconomica.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCAuxiliar.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCBienoServicio.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCBitacoraSucesos.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCBoSPrecio.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCConcepto.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCXCCondicionVenta.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCXCDetalles.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCXCDocumentoElectronico.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCEstado.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCEstadoPago.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCFormaPago.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCIdentificacionTipo.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCImporteIVA.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCXCImpuestosBoS.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCXCInfoAdicional.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCMaestro.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCMonedas.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCMovimientoCuenta.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCXCOtrosCargos.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCPeriodo.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCXCRazonExoneracion.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCXCReferencia.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCSocio.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCSocioTipo.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCStoreProc.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCTipoCambio.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCXCTipoCargoTerceros.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCXCTipoDocumento.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCTipoImpuesto.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCXCTipoOtrosCargos.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCXCTipoReferencia.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCCxCUMedidas.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pr_FCCxCActiEconomica_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCActiEconomica_SeleccionarTodos_Con_IdImporteIVA_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCActiEconomica_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCActiEconomica_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCAuxiliar_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCAuxiliar_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCAuxiliar_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBienoServicio_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBienoServicio_SeleccionarTodos_Con_IdAuxiliar_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBienoServicio_SeleccionarTodos_Con_IdConcepto_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBienoServicio_SeleccionarTodos_Con_IdMedida_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBienoServicio_SeleccionarTodos_Con_Id_SP_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBienoServicio_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBienoServicio_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBitacoraSucesos_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBitacoraSucesos_SeleccionarTodos_Con_IdAuxiliar_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBitacoraSucesos_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBitacoraSucesos_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBoSPrecio_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBoSPrecio_SeleccionarTodos_Con_IdBoS_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBoSPrecio_SeleccionarTodos_Con_NumPeriodo_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBoSPrecio_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCBoSPrecio_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCConcepto_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCConcepto_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCConcepto_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCCondicionVenta_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCCondicionVenta_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCCondicionVenta_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDetalles_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDetalles_SeleccionarTodos_Con_IdBoS_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDetalles_SeleccionarTodos_Con_IdDocumentoElectronico_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDetalles_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDetalles_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDocumentoElectronico_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDocumentoElectronico_SeleccionarTodos_Con_IdActiEonomica_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDocumentoElectronico_SeleccionarTodos_Con_IdCondicionVenta_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDocumentoElectronico_SeleccionarTodos_Con_IdFormaPago_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDocumentoElectronico_SeleccionarTodos_Con_IdMoneda_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDocumentoElectronico_SeleccionarTodos_Con_IdRazonExoneración_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDocumentoElectronico_SeleccionarTodos_Con_IdReferencia_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDocumentoElectronico_SeleccionarTodos_Con_IdSocio_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDocumentoElectronico_SeleccionarTodos_Con_IdTipoDocumento_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDocumentoElectronico_SeleccionarTodos_Con_IdTipoReferencia_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDocumentoElectronico_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCDocumentoElectronico_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCEstadoPago_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCEstadoPago_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCEstadoPago_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCEstado_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCEstado_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCEstado_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCFormaPago_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCFormaPago_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCFormaPago_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCIdentificacionTipo_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCIdentificacionTipo_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCIdentificacionTipo_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCImporteIVA_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCImporteIVA_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCImporteIVA_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCImpuestosBoS_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCImpuestosBoS_SeleccionarTodos_Con_IdBoS_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCImpuestosBoS_SeleccionarTodos_Con_IdTipoImpuesto_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCImpuestosBoS_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCImpuestosBoS_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCInfoAdicional_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCInfoAdicional_SeleccionarTodos_Con_IdDocumentoElectronico_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCInfoAdicional_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCInfoAdicional_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMaestro_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMaestro_SeleccionarTodos_Con_IdAuxiliar_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMaestro_SeleccionarTodos_Con_IdBoS_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMaestro_SeleccionarTodos_Con_IdCuentaAnterior_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMaestro_SeleccionarTodos_Con_IdEstado_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMaestro_SeleccionarTodos_Con_IdSocio_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMaestro_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMaestro_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMonedas_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMonedas_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMonedas_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMovimientoCuenta_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMovimientoCuenta_SeleccionarTodos_Con_IdAuxiliar_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMovimientoCuenta_SeleccionarTodos_Con_IdCuenta_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMovimientoCuenta_SeleccionarTodos_Con_IdEstadoPago_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMovimientoCuenta_SeleccionarTodos_Con_IdFormaPago_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMovimientoCuenta_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCMovimientoCuenta_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCOtrosCargos_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCOtrosCargos_SeleccionarTodos_Con_IdDocumento_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCOtrosCargos_SeleccionarTodos_Con_IdTercero_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCOtrosCargos_SeleccionarTodos_Con_IdTipoCargo_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCOtrosCargos_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCOtrosCargos_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCPeriodo_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCPeriodo_SeleccionarTodos_Con_IdAuxiliar_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCPeriodo_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCPeriodo_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCRazonExoneracion_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCRazonExoneracion_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCRazonExoneracion_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCReferencia_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCReferencia_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCReferencia_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCSocioTipo_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCSocioTipo_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCSocioTipo_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCSocio_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCSocio_SeleccionarTodos_Con_Id_TipoIdentif_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCSocio_SeleccionarTodos_Con_Id_TipoSocio_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCSocio_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCSocio_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCStoreProc_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCStoreProc_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCStoreProc_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCTipoCambio_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCTipoCambio_SeleccionarTodos_Con_IdMoneda_FK_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCTipoCambio_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCTipoCambio_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCTipoCargoTerceros_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCTipoCargoTerceros_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCTipoCargoTerceros_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCTipoDocumento_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCTipoDocumento_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCTipoDocumento_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCTipoImpuesto_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCTipoImpuesto_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCTipoImpuesto_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCTipoOtrosCargos_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCTipoOtrosCargos_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCTipoOtrosCargos_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCTipoReferencia_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCTipoReferencia_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCXCTipoReferencia_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCUMedidas_Buscar_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCUMedidas_SeleccionarTodos_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pr_FCCxCUMedidas_SeleccionarUno_Result.cs">
+      <DependentUpon>CxCModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="CxCModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CxCModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CxCModel.edmx.diagram">
+      <DependentUpon>CxCModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CxCModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CxCModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CxCModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CxCModel1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+</Project>

@@ -1,0 +1,64 @@
+﻿@model CxC.Datos.FCCxCPeriodo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Borrar</h2>
+
+<h3>Esta seguro que desea borrar este registro?</h3>
+<div>
+    <h4>Periodo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdPeriodo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdPeriodo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdAuxiliar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdAuxiliar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DscPeriodo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DscPeriodo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FecInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FecInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FecFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FecFinal)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-default" })
+    </div>
+    }
+</div>

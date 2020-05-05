@@ -1,0 +1,110 @@
+﻿@model CxC.Datos.FCCxCBienoServicio
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Editar</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>Bieno o Servicio</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.IdBoS, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.IdBoS, new { htmlAttributes = new { @class = "form-control", @readonly = "readOnly", @style = "width:20%" } })
+            @Html.ValidationMessageFor(model => model.IdBoS, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DscBoS, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DscBoS, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.DscBoS, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.IdAuxiliar, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.IdAuxiliar, (List<SelectListItem>)ViewBag.listaAuxiliar)
+            @Html.ValidationMessageFor(model => model.IdAuxiliar, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.IdConcepto, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.IdConcepto, (List<SelectListItem>)ViewBag.listaConcepto)
+            @Html.ValidationMessageFor(model => model.IdConcepto, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Id_SP, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.Id_SP, (List<SelectListItem>)ViewBag.listaSP)
+            @Html.ValidationMessageFor(model => model.Id_SP, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @*@Html.LabelFor(model => model.FecCreacion, htmlAttributes: new { @class = "control-label col-md-2" })*@
+        <div class="col-md-10">
+            @*@Html.EditorFor(model => model.FecCreacion, new { htmlAttributes = new { @class = "form-control" } })*@
+            @Html.HiddenFor(model => model.FecCreacion)
+            @Html.ValidationMessageFor(model => model.FecCreacion, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @*@Html.LabelFor(model => model.UsrCreacion, htmlAttributes: new { @class = "control-label col-md-2" })*@
+        <div class="col-md-10">
+            @*@Html.EditorFor(model => model.UsrCreacion, new { htmlAttributes = new { @class = "form-control" } })*@
+            @Html.HiddenFor(model => model.UsrCreacion)
+            @Html.ValidationMessageFor(model => model.UsrCreacion, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @*@Html.LabelFor(model => model.FecUltModif, htmlAttributes: new { @class = "control-label col-md-2" })*@
+        <div class="col-md-10">
+            @*@Html.EditorFor(model => model.FecUltModif, new { htmlAttributes = new { @class = "form-control" } })*@
+            @Html.HiddenFor(model => model.FecUltModif)
+            @Html.ValidationMessageFor(model => model.FecUltModif, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @*@Html.LabelFor(model => model.UsrUltModif, htmlAttributes: new { @class = "control-label col-md-2" })*@
+        <div class="col-md-10">
+            @*@Html.EditorFor(model => model.UsrUltModif, new { htmlAttributes = new { @class = "form-control" } })*@
+            @Html.HiddenFor(model => model.UsrUltModif)
+            @Html.ValidationMessageFor(model => model.UsrUltModif, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

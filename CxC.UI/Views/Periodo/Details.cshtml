@@ -1,0 +1,58 @@
+﻿@model CxC.Datos.FCCxCPeriodo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>pr_FCCxCPeriodo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdPeriodo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdPeriodo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdAuxiliar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdAuxiliar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DscPeriodo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DscPeriodo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FecInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FecInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FecFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FecFinal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Guardar cambios", "Edit", new { /* id = Model.PrimaryKey */ }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-default" })
+</p>

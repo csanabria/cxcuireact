@@ -1,0 +1,80 @@
+.estiloLabelCabecera {
+    padding-left: 20px;
+    min-height: 50px;
+    padding-left: 10px;
+    background-color: #005085;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px;
+};
+
+.vert-align {
+    top:0;
+    position: fixed;
+    z-index:100;
+}
+
+.encabezado {
+    background-color: #004379; 
+    border-bottom: 1px solid  #005085;
+    font-size: 20px;
+    text-align: left;
+    padding-top: 25px;
+    padding-left: 0%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: var(--alto-encabezado);
+    width: 100%;
+    color: #FFF;
+    font-weight: bold;
+    z-index: 999999;
+}
+
+.margen_automatico {
+    margin: auto;
+}
+
+.NombreUsuario{
+    width: 180px;
+    display: block;
+    margin: 5px auto;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    color: rgba(0,0,0,.87);
+    text-align: left;
+    cursor: pointer;
+}
+
+.fuenteTituloSistema {
+    margin-top:10px;
+    color:#005085;
+    font-weight:bold;
+    font-size:20px
+}
+
+.BarraNavegacion {
+    background-color: #eaebec; 
+    margin-top: 94px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.DatosSocio {
+    background-color: #eaebec; 
+    margin-top: 94px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.BarraNavegacionFormulario {
+    background-color: #eaebec; 
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TEC_WCF_SeguridadTec" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://tec-apps/WCFSeguridadTEC/ServiciosWeb/TEC_WCF_SeguridadTec.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Usu_AutenticarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usu_AutenticarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Usu_AutenticarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usu_AutenticarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Usu_ConsultarPermisosUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usu_ConsultarPermisosUsuario" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Usu_ConsultarPermisosUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usu_ConsultarPermisosUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Usu_ConsultarPermisoEspecificoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usu_ConsultarPermisoEspecificoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Usu_ConsultarPermisoEspecificoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usu_ConsultarPermisoEspecificoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Usu_ConsultarAplicacionesUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usu_ConsultarAplicacionesUsuario" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Usu_ConsultarAplicacionesUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usu_ConsultarAplicacionesUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Usu_ConsultarRolesUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usu_ConsultarRolesUsuario" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Usu_ConsultarRolesUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usu_ConsultarRolesUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Usu_ConsultarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usu_ConsultarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Usu_ConsultarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usu_ConsultarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Rol_Consultar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Rol_Consultar" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Rol_Consultar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Rol_ConsultarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Rol_ConsultarPermisosRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:Rol_ConsultarPermisosRol" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Rol_ConsultarPermisosRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Rol_ConsultarPermisosRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Rol_ConsultarUsuariosRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:Rol_ConsultarUsuariosRol" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Rol_ConsultarUsuariosRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Rol_ConsultarUsuariosRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Rol_ConsultarRolesAplicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:Rol_ConsultarRolesAplicacion" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Rol_ConsultarRolesAplicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Rol_ConsultarRolesAplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Seg_ConsultarAplicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seg_ConsultarAplicacion" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Seg_ConsultarAplicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seg_ConsultarAplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Seg_ConsultarMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seg_ConsultarMenu" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Seg_ConsultarMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seg_ConsultarMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Seg_ConsultarCorreoElectronico_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seg_ConsultarCorreoElectronico" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Seg_ConsultarCorreoElectronico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seg_ConsultarCorreoElectronicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Seg_InsertarBitacora_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seg_InsertarBitacora" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Seg_InsertarBitacora_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seg_InsertarBitacoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Seg_ValidarAccesoMetodoWeb_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seg_ValidarAccesoMetodoWeb" />
+  </wsdl:message>
+  <wsdl:message name="TEC_IWCF_SeguridadTec_Seg_ValidarAccesoMetodoWeb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seg_ValidarAccesoMetodoWebResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TEC_IWCF_SeguridadTec">
+    <wsdl:operation name="Usu_AutenticarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_AutenticarUsuario" message="tns:TEC_IWCF_SeguridadTec_Usu_AutenticarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_AutenticarUsuarioResponse" message="tns:TEC_IWCF_SeguridadTec_Usu_AutenticarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usu_ConsultarPermisosUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarPermisosUsuario" message="tns:TEC_IWCF_SeguridadTec_Usu_ConsultarPermisosUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarPermisosUsuarioResponse" message="tns:TEC_IWCF_SeguridadTec_Usu_ConsultarPermisosUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usu_ConsultarPermisoEspecificoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarPermisoEspecificoUsuario" message="tns:TEC_IWCF_SeguridadTec_Usu_ConsultarPermisoEspecificoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarPermisoEspecificoUsuarioResponse" message="tns:TEC_IWCF_SeguridadTec_Usu_ConsultarPermisoEspecificoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usu_ConsultarAplicacionesUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarAplicacionesUsuario" message="tns:TEC_IWCF_SeguridadTec_Usu_ConsultarAplicacionesUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarAplicacionesUsuarioResponse" message="tns:TEC_IWCF_SeguridadTec_Usu_ConsultarAplicacionesUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usu_ConsultarRolesUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarRolesUsuario" message="tns:TEC_IWCF_SeguridadTec_Usu_ConsultarRolesUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarRolesUsuarioResponse" message="tns:TEC_IWCF_SeguridadTec_Usu_ConsultarRolesUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usu_ConsultarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarUsuario" message="tns:TEC_IWCF_SeguridadTec_Usu_ConsultarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarUsuarioResponse" message="tns:TEC_IWCF_SeguridadTec_Usu_ConsultarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Rol_Consultar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Rol_Consultar" message="tns:TEC_IWCF_SeguridadTec_Rol_Consultar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Rol_ConsultarResponse" message="tns:TEC_IWCF_SeguridadTec_Rol_Consultar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Rol_ConsultarPermisosRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Rol_ConsultarPermisosRol" message="tns:TEC_IWCF_SeguridadTec_Rol_ConsultarPermisosRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Rol_ConsultarPermisosRolResponse" message="tns:TEC_IWCF_SeguridadTec_Rol_ConsultarPermisosRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Rol_ConsultarUsuariosRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Rol_ConsultarUsuariosRol" message="tns:TEC_IWCF_SeguridadTec_Rol_ConsultarUsuariosRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Rol_ConsultarUsuariosRolResponse" message="tns:TEC_IWCF_SeguridadTec_Rol_ConsultarUsuariosRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Rol_ConsultarRolesAplicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Rol_ConsultarRolesAplicacion" message="tns:TEC_IWCF_SeguridadTec_Rol_ConsultarRolesAplicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Rol_ConsultarRolesAplicacionResponse" message="tns:TEC_IWCF_SeguridadTec_Rol_ConsultarRolesAplicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seg_ConsultarAplicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_ConsultarAplicacion" message="tns:TEC_IWCF_SeguridadTec_Seg_ConsultarAplicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_ConsultarAplicacionResponse" message="tns:TEC_IWCF_SeguridadTec_Seg_ConsultarAplicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seg_ConsultarMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_ConsultarMenu" message="tns:TEC_IWCF_SeguridadTec_Seg_ConsultarMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_ConsultarMenuResponse" message="tns:TEC_IWCF_SeguridadTec_Seg_ConsultarMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seg_ConsultarCorreoElectronico">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_ConsultarCorreoElectronico" message="tns:TEC_IWCF_SeguridadTec_Seg_ConsultarCorreoElectronico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_ConsultarCorreoElectronicoResponse" message="tns:TEC_IWCF_SeguridadTec_Seg_ConsultarCorreoElectronico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seg_InsertarBitacora">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_InsertarBitacora" message="tns:TEC_IWCF_SeguridadTec_Seg_InsertarBitacora_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_InsertarBitacoraResponse" message="tns:TEC_IWCF_SeguridadTec_Seg_InsertarBitacora_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seg_ValidarAccesoMetodoWeb">
+      <wsdl:input wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_ValidarAccesoMetodoWeb" message="tns:TEC_IWCF_SeguridadTec_Seg_ValidarAccesoMetodoWeb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_ValidarAccesoMetodoWebResponse" message="tns:TEC_IWCF_SeguridadTec_Seg_ValidarAccesoMetodoWeb_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_TEC_IWCF_SeguridadTec" type="tns:TEC_IWCF_SeguridadTec">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Usu_AutenticarUsuario">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_AutenticarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usu_ConsultarPermisosUsuario">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarPermisosUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usu_ConsultarPermisoEspecificoUsuario">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarPermisoEspecificoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usu_ConsultarAplicacionesUsuario">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarAplicacionesUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usu_ConsultarRolesUsuario">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarRolesUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usu_ConsultarUsuario">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Usu_ConsultarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rol_Consultar">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Rol_Consultar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rol_ConsultarPermisosRol">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Rol_ConsultarPermisosRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rol_ConsultarUsuariosRol">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Rol_ConsultarUsuariosRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rol_ConsultarRolesAplicacion">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Rol_ConsultarRolesAplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seg_ConsultarAplicacion">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_ConsultarAplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seg_ConsultarMenu">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_ConsultarMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seg_ConsultarCorreoElectronico">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_ConsultarCorreoElectronico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seg_InsertarBitacora">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_InsertarBitacora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seg_ValidarAccesoMetodoWeb">
+      <soap:operation soapAction="http://tempuri.org/TEC_IWCF_SeguridadTec/Seg_ValidarAccesoMetodoWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TEC_WCF_SeguridadTec">
+    <wsdl:port name="BasicHttpBinding_TEC_IWCF_SeguridadTec" binding="tns:BasicHttpBinding_TEC_IWCF_SeguridadTec">
+      <soap:address location="http://tec-apps/WCFSeguridadTEC/ServiciosWeb/TEC_WCF_SeguridadTec.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

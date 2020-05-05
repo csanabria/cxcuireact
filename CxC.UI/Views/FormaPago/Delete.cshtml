@@ -1,0 +1,48 @@
+﻿@model CxC.Datos.FCCxCFormaPago
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Borrar</h2>
+
+<h3>Esta seguro que desea borrar este registo?</h3>
+<div>
+    <h4>Formas de Pago</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdFormaPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdFormaPago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DscFormaPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DscFormaPago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodEstado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodEstado)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

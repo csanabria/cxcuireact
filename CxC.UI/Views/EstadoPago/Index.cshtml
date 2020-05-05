@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CxC.Datos.FCCxCEstadoPago>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista</h2>
+
+<p>
+    @Html.ActionLink("Crear", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdEstadoPago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DscEstadoPago)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdEstadoPago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DscEstadoPago)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new {  id=item.IdEstadoPago  }) |
+            @Html.ActionLink("Detalle", "Details", new { id = item.IdEstadoPago }) |
+            @Html.ActionLink("Borrar", "Delete", new { id = item.IdEstadoPago })
+        </td>
+    </tr>
+}
+
+</table>

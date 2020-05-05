@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CxC.Datos.FCCxCIdentificacionTipo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tipo de identificación</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_TipoIdentif)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dsc_TipoIdentif)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_TipoIdentif)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dsc_TipoIdentif)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id_TipoIdentif  }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.Id_TipoIdentif  }) |
+            @Html.ActionLink("Eliminar", "Delete", new {  id=item.Id_TipoIdentif  })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,152 @@
+﻿@model CxC.Datos.FCCxCSocio
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Esta seguro que desea borrar este registro?</h3>
+<div>
+    <h4>Socio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Id_Socio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Socio)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_Identificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_Identificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_TipoIdentif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_TipoIdentif)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_Identificacion2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_Identificacion2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dsc_NombreSocio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dsc_NombreSocio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dsc_NombreSocio2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dsc_NombreSocio2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_TipoSocio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_TipoSocio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email_Socio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email_Socio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.num_CelularSocio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_CelularSocio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.num_TelefonoSocio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_TelefonoSocio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dsc_Info1Socio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dsc_Info1Socio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dsc_Info2Socio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dsc_Info2Socio)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Fec_Creacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fec_Creacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usr_Creacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usr_Creacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fec_UltModif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fec_UltModif)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usr_UltModif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usr_UltModif)
+        </dd>*@
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-default" })
+    </div>
+    }
+</div>

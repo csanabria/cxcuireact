@@ -1,0 +1,92 @@
+﻿@model CxC.Datos.FCCxCConcepto
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Crear</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Concepto</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.IdConcepto, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.IdConcepto, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.IdConcepto, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DscTipo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DscTipo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DscTipo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CodEstado, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+
+                @*@Html.EditorFor(model => model.CodEstado, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.DropDownListFor(model=> model.CodEstado, (List<SelectListItem>)ViewBag.listaCodigoEstado)
+                @Html.ValidationMessageFor(model => model.CodEstado, "", new { @class = "text-danger" })
+</div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CtaContable, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CtaContable, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CtaContable, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UsarExpiracion, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.UsarExpiracion, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.DropDownListFor(model => model.UsarExpiracion,(List<SelectListItem>)ViewBag.ListaSiNo)
+                @Html.ValidationMessageFor(model => model.UsarExpiracion, "", new { @class = "text-danger" })
+        </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NumDiasExpira, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NumDiasExpira, new { htmlAttributes = new { @class = "form-control" , @style= "width:20%"} })
+                @Html.ValidationMessageFor(model => model.NumDiasExpira, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EnviaNotificacion, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.EnviaNotificacion, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.DropDownListFor(model => model.EnviaNotificacion, (List<SelectListItem>)ViewBag.ListaSiNo)
+                @Html.ValidationMessageFor(model => model.EnviaNotificacion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Crear" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

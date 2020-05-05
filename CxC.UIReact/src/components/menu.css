@@ -1,0 +1,26 @@
+ul.menu
+{
+    margin-top: 24px;
+    background-color: #C0C0C0;
+    min-width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: var(--color-negro);
+}
+ul.menu li
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    text-align: center;
+}
+ul.menu li:hover
+{
+    background-color: #F2F2F2;
+}
+
+ul.menu li a {
+    text-decoration: none;
+    cursor: grab;
+}

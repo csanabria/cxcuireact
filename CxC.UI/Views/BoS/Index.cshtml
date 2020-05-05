@@ -1,0 +1,95 @@
+﻿@model IEnumerable<CxC.Datos.FCCxCBienoServicio>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista</h2>
+
+<p>
+    @Html.ActionLink("Crear", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdBoS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DscBoS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdAuxiliar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdConcepto)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.FecCreacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsrCreacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FecUltModif)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsrUltModif)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Id_SP)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdBoS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DscBoS)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.IdAuxiliar)*@
+            @{
+                List<CxC.Datos.FCCxCAuxiliar> Auxiliar = ViewBag.Auxiliar;
+                string dscAuxiliar = Auxiliar.FirstOrDefault(a => a.IdAuxiliar == item.IdAuxiliar ).DscAuxiliar.ToString();
+            }
+            @Html.Label(dscAuxiliar)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.IdConcepto)*@
+            @{
+                List<CxC.Datos.FCCxCConcepto> periodo = ViewBag.Concepto;
+                string dscConcepto = periodo.FirstOrDefault(a => a.IdConcepto  == item.IdConcepto ).DscTipo.ToString();
+            }
+            @Html.Label(dscConcepto)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.FecCreacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsrCreacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FecUltModif)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsrUltModif)
+        </td>*@
+        <td>
+            @{
+                List<CxC.Datos.FCCxCStoreProc> SP = ViewBag.SP;
+                string dsSP = SP.FirstOrDefault(a => a.Id_SP  == item.Id_SP).Nom_SP.ToString();
+            }
+            @Html.Label(dsSP)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.IdBoS }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.IdBoS }) |
+            @Html.ActionLink("Borrar", "Delete", new { id = item.IdBoS })
+        </td>
+    </tr>
+}
+
+</table>

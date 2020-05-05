@@ -1,0 +1,13 @@
+Tomado de: https://hackernoon.com/adding-web-config-to-react-projects-3eb762dbe01f
+
+Contenido del .js
+
+const fs = require('fs-extra');
+
+const webConfigPath = './build/web.config';
+
+if (fs.existsSync(webConfigPath)) {
+    fs.unlinkSync(webConfigPath);
+}
+
+fs.copySync('./iisConfig/web.config', webConfigPath);

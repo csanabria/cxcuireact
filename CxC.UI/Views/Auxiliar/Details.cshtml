@@ -1,0 +1,42 @@
+﻿@model CxC.Datos.FCCxCAuxiliar
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Auxiliar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdAuxiliar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdAuxiliar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DscAuxiliar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DscAuxiliar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodEstado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodEstado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

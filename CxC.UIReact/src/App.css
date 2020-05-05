@@ -1,0 +1,109 @@
+:root {
+  --color-azul-tec: #005085;
+  --color-negro: #000;
+  --color-blanco : #FFF;
+  --alto-encabezado : 50px;
+  --posicion-menu : 5px;
+  --alto-menu: 10px
+}
+/* De Pablo */
+/* .App {
+  text-align: center;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+/* body {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+} */
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+ /* background-color: #282c34;*/
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  /*color: white;*/
+}
+
+.App-link {
+  color: #09d3ac;
+}
+/*Fin de Pablo */
+
+.App {
+  background-color: var(--color-blanco);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  padding: 0!important;
+  margin-top: 100px;
+}
+.centradoHV {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: red;  /*para probar que funcione. Le pone rojo alrededor */
+}
+.amarilla {
+  background-color: yellow;
+}
+.letra-normal
+{
+  font-size: 14px;
+}
+.center-div
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.center-div-login
+{
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 3px;
+  border-color: darkblue;
+  margin: -250px 0 0 -250px
+}
+
+.center-div-aplicacion
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  border-radius: 3px;
+  border-color: darkblue;
+}

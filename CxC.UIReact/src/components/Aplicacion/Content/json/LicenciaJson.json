@@ -1,0 +1,22 @@
+[
+    { 
+        "IdLicencia": "1",
+        "Nombre": "ZOOM Profesional",
+        "URL": "www.zoom.com",
+        "Descripcion": "Es el software Zoom",
+        "Version": "2.0",
+        "Edicion": "Profesional",
+        "IdUsoLicencia": "2",
+        "IdFormaLicenciamiento": "2",
+        "IdPeriodicidad": "2",
+        "IdPrioridad": "2",
+        "Cantidad": "8",
+        "Costo": "9000",
+        "NumOrdenCompra": "xx-1001",
+        "FechaRegistro": "01/01/2019",
+        "FechaDisponible": "02/01/2019",
+        "FechaVencimiento": "01/01/2020",
+        "IdGrupoLicencias": "2",
+        "IdEstado": "1"
+    }
+  ]

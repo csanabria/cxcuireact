@@ -1,0 +1,40 @@
+﻿@model CxC.Datos.FCCxCIdentificacionTipo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Esta seguro que desea borrar este registro?</h3>
+<div>
+    <h4>Identificación Tipo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_TipoIdentif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_TipoIdentif)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dsc_TipoIdentif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dsc_TipoIdentif)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Borrar" class="btn btn-default" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    }
+</div>

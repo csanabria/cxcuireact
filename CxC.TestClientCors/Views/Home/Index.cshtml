@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <select id="method">
+        <option value="get">GET</option>
+        <option value="post">POST</option>
+        <option value="put">PUT</option>
+    </select>
+    <input class="btn btn-primary" type="button" value="Ajax" onclick="sendRequest()" />
+    <input class="btn btn-warning" type="button" value="Fetch" onclick="sendRequestFetch()" />
+    <span id='value1'>(Result)</span>
+</div>
+
+@section scripts {
+    <script>
+        // TODO: Replace with the URL of your WebService app
+        var serviceUrl = 'http://localhost:65000/api/test';
+
+        function sendRequest() {
+            debugger;
+            var method = $('#method').val();
+
+            $.ajax({
+                type: method,
+                url: serviceUrl
+            }).done(function (data) {
+                $('#value1').text(data.msg);
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                $('#value1').text(jqXHR.responseText || textStatus);
+            });
+        }
+
+        function sendRequestFetch() {
+            debugger;
+            fetch(serviceUrl, { method: 'POST' })
+            .then(
+                function (response) {
+                    debugger;
+                    if (response.status !== 200) {
+                        console.log('Looks like there was a problem. Status Code: ' +
+                            response.status);
+                        $('#value1').text
+                        return;
+                    }
+                    // Examine the text in the response
+                    response.json().then(function (data) {
+                        debugger;
+                        console.log(data.msg);
+                        $('#value1').text(data.msg);
+                    });
+                }
+            )
+            .catch(function (err) {
+                    debugger;
+                console.log('Fetch Error :-S', err);
+                $('#value1').text('Fetch Error :-S', err);
+            });
+        }
+
+
+
+
+    </script>
+}

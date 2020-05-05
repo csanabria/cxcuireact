@@ -1,0 +1,34 @@
+﻿@model CxC.Datos.FCCxCIdentificacionTipo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Identificación Tipo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_TipoIdentif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_TipoIdentif)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dsc_TipoIdentif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dsc_TipoIdentif)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

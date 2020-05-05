@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ObtenerBoSPrecio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdAuxiliar" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdBienOServicio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Periodo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerBoSPrecioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerBoSPrecioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarCxC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdAuxiliar" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdBoS" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdSocio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CantDiasNaturalesExpira" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="TipoMov" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdLlaveExterna" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCuentaAnterior" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarCxCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarCxCResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AfectarMontoCxC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdCuenta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdAuxiliar" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="TipoMov" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumDocto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsrModif" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AfectarMontoCxCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AfectarMontoCxCResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCxC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdCuenta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdAuxiliar" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdBoS" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdSocio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdEstado" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="EstCobro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdLlaveExterna" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCxCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCxCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTiposdeDeudor">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerTiposdeDeudorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerTiposdeDeudorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTiposDeIdentificaciones">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerTiposDeIdentificacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerTiposDeIdentificacionesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTiposDeSocio">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerTiposDeSocioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerTiposDeSocioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarSocio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Identificacion1" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdTipoIdentif1" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identificacion2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreCompleto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreSocio2" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoSocio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TelCelular" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="info1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="info2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarSocioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarSocioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarSocio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdSocio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identificacion1" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdTipoIdentif1" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identificacion2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreCompleto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreSocio2" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoSocio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TelCelular" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="info1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="info2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsrModifacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarSocioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarSocioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarSocio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdSocio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identificacion1" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoIdentif" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identificacion2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreCompleto" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoSocio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TelCelular" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarSocioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarSocioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObtenerBoSPrecioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerBoSPrecio" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerBoSPrecioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerBoSPrecioResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarCxCSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarCxC" />
+  </wsdl:message>
+  <wsdl:message name="InsertarCxCSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarCxCResponse" />
+  </wsdl:message>
+  <wsdl:message name="AfectarMontoCxCSoapIn">
+    <wsdl:part name="parameters" element="tns:AfectarMontoCxC" />
+  </wsdl:message>
+  <wsdl:message name="AfectarMontoCxCSoapOut">
+    <wsdl:part name="parameters" element="tns:AfectarMontoCxCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCxCSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCxC" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCxCSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCxCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTiposdeDeudorSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerTiposdeDeudor" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTiposdeDeudorSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerTiposdeDeudorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTiposDeIdentificacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerTiposDeIdentificaciones" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTiposDeIdentificacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerTiposDeIdentificacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTiposDeSocioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerTiposDeSocio" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTiposDeSocioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerTiposDeSocioResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarSocioSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarSocio" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarSocioSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarSocioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarSocioSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarSocio" />
+  </wsdl:message>
+  <wsdl:message name="ModificarSocioSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarSocioResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarSocioSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarSocio" />
+  </wsdl:message>
+  <wsdl:message name="BuscarSocioSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarSocioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsCxCSoap">
+    <wsdl:operation name="ObtenerBoSPrecio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna la lista de Bienes o Servicios asociados a un Auxiliar, con su respectivo IdPrecio, Precio(colones) y Periodo(año). Parametros: IdAuxiliar(es obligatorio), En el IdBienOServicio y Periodo enviar 0 (cero) si no se utilizan</wsdl:documentation>
+      <wsdl:input message="tns:ObtenerBoSPrecioSoapIn" />
+      <wsdl:output message="tns:ObtenerBoSPrecioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCxC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserta un registro en el maestro de cuentas por cobrar. Retorna el ID de la cuenta por cobrar, si no lo pudo agregar retorna un 0.  Parametros: IdAuxiliar(Id del auxiliar que se le asigno), IdBoS(Id del Bien o Servicio), IdSocio(Id de Socio según el catálogo de Socios, es requerido), CantDiasNaturalesExpira(Cantidad de días naturales para el inicio de la morocidad), Monto(Monto en colones), IdLlaveExterna(Es el Id de su documento que genero el movimiento), Descripcion (Indicar la descripción de la cuenta), idCuentaAnterior(Indica el id de otra cuenta x cobrar que será remplazada con la nueva, enviar un 0 cero si no se utiliza), UsrCreacion(indicar el usuario que se logueo en el sistema))</wsdl:documentation>
+      <wsdl:input message="tns:InsertarCxCSoapIn" />
+      <wsdl:output message="tns:InsertarCxCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AfectarMontoCxC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agrega un movimiento a la cuentas por cobrar ya sea de incremento o decremento del monto. Retorna el ID del nuevo movimiento que se generó, este id es independiente del IdCuenta, si no lo pudo agregar retorna un 0.  Parametros: IdAuxiliar(Id del auxiliar que esta generando el movimiento), IdCuenta(Id de la cuenta que se desea modificar), Monto(Monto en colones, si es negativo decrementa, positivo incrementa), Descripcion (Indicar la descripción de la cuenta), numDocto(indicar un numero de documento o numero de referencia que justifique la transaccion que se realiza, enviar string vacio si no existe ninguno), UsrModif(indicar el usuario que se logueo en el sistema))</wsdl:documentation>
+      <wsdl:input message="tns:AfectarMontoCxCSoapIn" />
+      <wsdl:output message="tns:AfectarMontoCxCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCxC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna la lista de Cuentas por Cobrar que cumplan con los parametros especificados. Parametros: IdAuxiliar(es obligatorio), El resto son opcionales, si no se utilizan  enviar 0 (cero) si es entero o vacio si es string</wsdl:documentation>
+      <wsdl:input message="tns:ObtenerCxCSoapIn" />
+      <wsdl:output message="tns:ObtenerCxCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTiposdeDeudor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna la lista de tipos de deudor</wsdl:documentation>
+      <wsdl:input message="tns:ObtenerTiposdeDeudorSoapIn" />
+      <wsdl:output message="tns:ObtenerTiposdeDeudorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTiposDeIdentificaciones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna la lista de tipos de Identificaciones</wsdl:documentation>
+      <wsdl:input message="tns:ObtenerTiposDeIdentificacionesSoapIn" />
+      <wsdl:output message="tns:ObtenerTiposDeIdentificacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTiposDeSocio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna la lista de tipos de Socio</wsdl:documentation>
+      <wsdl:input message="tns:ObtenerTiposDeSocioSoapIn" />
+      <wsdl:output message="tns:ObtenerTiposDeSocioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarSocio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserta un registro en el maestro de Socios. Retorna el ID del socio,  si no lo pudo agregar retorna un 0, adicionalmente si encuentra a algun socio que ya este registrado con alguna de las 2 identificaciones va a retornar su Id pero como un numero negativo, debe utilizar el metodo de buscar para determinar cual es codigo, este metodo se debe llamar previo a enviar a crear un socio. Parametros: Identificacion1(Numero de Identificacion de la persona ejm cedula o pasaporte, 50 caracteres max),  Identificacion2(Numero de Identificacion2 de la persona, por ejm el carnet de estudiante, 50 caracteres max), NombreCompleto(Nombre Completo de la persona, 80 caracteres max), TipoSocio(Indica el tipo de socio de acuerdo a la tabla de tipos de socios),  Email(Correo electronico del socio, 80 caracteres max), TelCelular(Indicar el numero de telefono celular) UsrCreacion(indicar el usuario que se logueo en el sistema))</wsdl:documentation>
+      <wsdl:input message="tns:RegistrarSocioSoapIn" />
+      <wsdl:output message="tns:RegistrarSocioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarSocio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza los datos de un socio.Retorna 1 si la modificación fue exitosa, si no lo pudo modificar retorna un 0, adicionalmente si encuentra a algun socio que ya este registrado con alguna de las 2 identificaciones va a retornar su Id pero como un numero negativo. Parametros: IdSocio, Identificacion1(Numero de Identificacion de la persona ejm cedula o pasaporte, 50 caracteres max),  Identificacion2(Numero de Identificacion2 de la persona, por ejm el carnet de estudiante, 50 caracteres max), NombreCompleto(Nombre Completo de la persona, 80 caracteres max), TipoSocio(Indica el tipo de socio de acuerdo a la tabla de tipos de socios, envie un Cero si no desea modificarlo),  Email(Correo electronico del socio, 80 caracteres max), TelCelular(Indicar el numero de telefono celular) UsrCreacion(indicar el usuario que se logueo en el sistema))</wsdl:documentation>
+      <wsdl:input message="tns:ModificarSocioSoapIn" />
+      <wsdl:output message="tns:ModificarSocioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarSocio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca en el maestro de socios de acuerdo a los parametros suministrados. Parametros: IdSocio, Identificacion1, Identificacion2, NombreCompleto, TipoSocio(Envie un Cero si no desea modificarlo),  Email, TelCelular)</wsdl:documentation>
+      <wsdl:input message="tns:BuscarSocioSoapIn" />
+      <wsdl:output message="tns:BuscarSocioSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsCxCSoap" type="tns:wsCxCSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerBoSPrecio">
+      <soap:operation soapAction="http://tempuri.org/ObtenerBoSPrecio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCxC">
+      <soap:operation soapAction="http://tempuri.org/InsertarCxC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AfectarMontoCxC">
+      <soap:operation soapAction="http://tempuri.org/AfectarMontoCxC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCxC">
+      <soap:operation soapAction="http://tempuri.org/ObtenerCxC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTiposdeDeudor">
+      <soap:operation soapAction="http://tempuri.org/ObtenerTiposdeDeudor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTiposDeIdentificaciones">
+      <soap:operation soapAction="http://tempuri.org/ObtenerTiposDeIdentificaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTiposDeSocio">
+      <soap:operation soapAction="http://tempuri.org/ObtenerTiposDeSocio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarSocio">
+      <soap:operation soapAction="http://tempuri.org/RegistrarSocio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarSocio">
+      <soap:operation soapAction="http://tempuri.org/ModificarSocio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarSocio">
+      <soap:operation soapAction="http://tempuri.org/BuscarSocio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsCxCSoap12" type="tns:wsCxCSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerBoSPrecio">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerBoSPrecio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCxC">
+      <soap12:operation soapAction="http://tempuri.org/InsertarCxC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AfectarMontoCxC">
+      <soap12:operation soapAction="http://tempuri.org/AfectarMontoCxC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCxC">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerCxC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTiposdeDeudor">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerTiposdeDeudor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTiposDeIdentificaciones">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerTiposDeIdentificaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTiposDeSocio">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerTiposDeSocio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarSocio">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarSocio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarSocio">
+      <soap12:operation soapAction="http://tempuri.org/ModificarSocio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarSocio">
+      <soap12:operation soapAction="http://tempuri.org/BuscarSocio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsCxC">
+    <wsdl:port name="wsCxCSoap" binding="tns:wsCxCSoap">
+      <soap:address location="http://va-72382/SIVADCxCWS/wsCxC.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsCxCSoap12" binding="tns:wsCxCSoap12">
+      <soap12:address location="http://va-72382/SIVADCxCWS/wsCxC.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

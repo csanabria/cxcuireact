@@ -1,0 +1,5 @@
+[
+    { "IdContactoProveedor": "1","IdProveedor": "1","Proveedor": "ZOOM","IdLicencia": "1","Nombre": "Juan","CorreoElectronico": "juan@zoom.com","Telefono": "1111111","IdEstado": "1","Estado": "Inactivo"},
+    { "IdContactoProveedor": "2","IdProveedor": "2","Proveedor": "Adobe","IdLicencia": "2","Nombre": "Pedro","CorreoElectronico": "pedro@adobe.com","Telefono": "22222222","IdEstado": "1","Estado": "Activo"},
+    { "IdContactoProveedor": "3","IdProveedor": "2","Proveedor": "Adobe","IdLicencia": "2","Nombre": "Maria","CorreoElectronico": "maria@adobe.com","Telefono": "22222222","IdEstado": "2","Estado": "Inactivo"}
+  ]

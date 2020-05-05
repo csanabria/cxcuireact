@@ -1,0 +1,255 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA0E587B-E0FA-4ABD-B14F-5DDE48BFF331}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Licenciamiento.UIReact</RootNamespace>
+    <AssemblyName>Licenciamiento.UIReact</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iisConfig\copyIISConfig.js" />
+    <Content Include="iisConfig\fuente.txt" />
+    <Content Include="public\config.js" />
+    <Content Include="public\Content\img\anim_tec.gif" />
+    <Content Include="public\Content\img\banner-logueo.png" />
+    <Content Include="public\Content\img\icon_lock.svg" />
+    <Content Include="public\Content\img\icon_user.svg" />
+    <Content Include="public\Content\img\logotec_blanco.png" />
+    <Content Include="public\Content\img\logotec_grande.png" />
+    <Content Include="public\Content\img\perfil.png" />
+    <Content Include="public\Content\img\SignOut.png" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\index.html" />
+    <Content Include="public\robots.txt" />
+    <Content Include="src\App.css" />
+    <Content Include="src\App.js" />
+    <Content Include="src\App.test.js" />
+    <Content Include="src\components\Aplicacion\aplicacion.css" />
+    <Content Include="src\components\Aplicacion\Aplicacion.js" />
+    <Content Include="src\components\Aplicacion\components\contacts.js" />
+    <Content Include="src\components\Aplicacion\components\ErrorBoundary.js" />
+    <Content Include="src\components\Aplicacion\components\Formulario\Formulario.js" />
+    <Content Include="src\components\Aplicacion\components\Listados.js" />
+    <Content Include="src\components\Aplicacion\InicioSocio.css" />
+    <Content Include="src\components\Aplicacion\InicioSocio.js" />
+    <Content Include="src\components\Aplicacion\Content\img\Abajo-512.png" />
+    <Content Include="src\components\Aplicacion\Content\img\anim_tec.gif" />
+    <Content Include="src\components\Aplicacion\Content\img\banner-logueo.png" />
+    <Content Include="src\components\Aplicacion\Content\img\Derecha-512.png" />
+    <Content Include="src\components\Aplicacion\Content\img\glyphicons-edit.png" />
+    <Content Include="src\components\Aplicacion\Content\img\glyphicons-renew.png" />
+    <Content Include="src\components\Aplicacion\Content\img\glyphicons-view.png" />
+    <Content Include="src\components\Aplicacion\Content\img\icon_lock.svg" />
+    <Content Include="src\components\Aplicacion\Content\img\icon_user.svg" />
+    <Content Include="src\components\Aplicacion\Content\img\logo.svg" />
+    <Content Include="src\components\Aplicacion\Content\img\logotec_blanco.png" />
+    <Content Include="src\components\Aplicacion\Content\img\logotec_grande.png" />
+    <Content Include="src\components\Aplicacion\Content\img\perfil.png" />
+    <Content Include="src\components\Aplicacion\Formulario - Antes de cambios 3 marzo csanabria .js" />
+    <Content Include="src\components\Aplicacion\Formulario.css" />
+    <Content Include="src\components\Aplicacion\Formulario.js" />
+    <Content Include="src\components\Aplicacion\index.css" />
+    <Content Include="src\components\Aplicacion\index.js" />
+    <Content Include="src\components\Aplicacion\Modal.css" />
+    <Content Include="src\components\Aplicacion\MyRouter.js" />
+    <Content Include="src\components\Aplicacion\Proveedores.js" />
+    <Content Include="src\components\Aplicacion\Tabla.css" />
+    <Content Include="src\components\Aplicacion\TablaLicencias.js" />
+    <Content Include="src\components\Content\img\Abajo-512.png" />
+    <Content Include="src\components\Content\img\anim_tec.gif" />
+    <Content Include="src\components\Content\img\banner-logueo.png" />
+    <Content Include="src\components\Content\img\Derecha-512.png" />
+    <Content Include="src\components\Content\img\glyphicons-edit.png" />
+    <Content Include="src\components\Content\img\glyphicons-renew.png" />
+    <Content Include="src\components\Content\img\glyphicons-view.png" />
+    <Content Include="src\components\Content\img\icon_lock.svg" />
+    <Content Include="src\components\Content\img\icon_user.svg" />
+    <Content Include="src\components\Content\img\logo.svg" />
+    <Content Include="src\components\Content\img\logotec_blanco.png" />
+    <Content Include="src\components\Content\img\logotec_grande.png" />
+    <Content Include="src\components\Content\img\perfil.png" />
+    <Content Include="src\components\Content\img\SignOut.png" />
+    <Content Include="src\components\Encabezado.css" />
+    <Content Include="src\components\Encabezado.js" />
+    <Content Include="src\components\Login.css" />
+    <Content Include="src\components\Login.js" />
+    <Content Include="src\components\menu.css" />
+    <Content Include="src\components\Menu.js" />
+    <Content Include="src\components\PiePagina.css" />
+    <Content Include="src\components\PiePagina.js" />
+    <Content Include="src\components\visorestado.css" />
+    <Content Include="src\components\VisorEstado.js" />
+    <Content Include="src\config.js" />
+    <Content Include="src\Content\bootstrap.css" />
+    <Content Include="src\Content\img\Abajo-512.png" />
+    <Content Include="src\Content\img\anim_tec copy.gif" />
+    <Content Include="src\Content\img\anim_tec.gif" />
+    <Content Include="src\Content\img\banner-logueo.png" />
+    <Content Include="src\Content\img\Derecha-512.png" />
+    <Content Include="src\Content\img\glyphicons-edit.png" />
+    <Content Include="src\Content\img\glyphicons-renew.png" />
+    <Content Include="src\Content\img\glyphicons-view.png" />
+    <Content Include="src\Content\img\icon_lock.svg" />
+    <Content Include="src\Content\img\icon_user.svg" />
+    <Content Include="src\Content\img\logo.svg" />
+    <Content Include="src\Content\img\logotec_blanco.png" />
+    <Content Include="src\Content\img\logotec_grande.png" />
+    <Content Include="src\Content\img\perfil.png" />
+    <Content Include="src\Content\img\SignOut.png" />
+    <Content Include="src\Content\Site.css" />
+    <Content Include="src\context\AppContext.js" />
+    <Content Include="src\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="src\index.css" />
+    <Content Include="src\index.js" />
+    <Content Include="src\serviceWorker.js" />
+    <Content Include="src\userContext.js" />
+    <Content Include="src\utils\history.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="iisConfig\Web.config" />
+    <Content Include=".env" />
+    <Content Include="src\components\Aplicacion\Content\json\ContactoEntidadJson.json" />
+    <Content Include="src\components\Aplicacion\Content\json\ContactosProveedorJson.json" />
+    <Content Include="src\components\Aplicacion\Content\json\EntidadJson.json" />
+    <Content Include="src\components\Aplicacion\Content\json\EstadosJson.json" />
+    <Content Include="src\components\Aplicacion\Content\json\FormaLicJson.json" />
+    <Content Include="src\components\Aplicacion\Content\json\gruposJson.json" />
+    <Content Include="src\components\Aplicacion\Content\json\LicenciaJson.json" />
+    <Content Include="src\components\Aplicacion\Content\json\LicenciasJson.json" />
+    <Content Include="src\components\Aplicacion\Content\json\PeriodicidadJson.json" />
+    <Content Include="src\components\Aplicacion\Content\json\PrioridadJson.json" />
+    <Content Include="src\components\Aplicacion\Content\json\ProveedoresJson.json" />
+    <Content Include="src\components\Aplicacion\Content\json\UsoLicJson.json" />
+    <Content Include="src\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="src\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="src\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="src\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="src\permisos.json" />
+    <Content Include="public\Content\bootstrap.css.map" />
+    <Content Include="public\manifest.json" />
+    <Content Include="src\components\Content\json\ContactoEntidadJson.json" />
+    <Content Include="src\components\Content\json\ContactosProveedorJson.json" />
+    <Content Include="src\components\Content\json\EntidadJson.json" />
+    <Content Include="src\components\Content\json\EstadosJson.json" />
+    <Content Include="src\components\Content\json\FormaLicJson.json" />
+    <Content Include="src\components\Content\json\gruposJson.json" />
+    <Content Include="src\components\Content\json\LicenciaJson.json" />
+    <Content Include="src\components\Content\json\LicenciasJson.json" />
+    <Content Include="src\components\Content\json\PeriodicidadJson.json" />
+    <Content Include="src\components\Content\json\PrioridadJson.json" />
+    <Content Include="src\components\Content\json\ProveedoresJson.json" />
+    <Content Include="src\components\Content\json\UsoLicJson.json" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62961</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62961/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

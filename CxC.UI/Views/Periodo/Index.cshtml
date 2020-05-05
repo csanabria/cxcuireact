@@ -1,0 +1,64 @@
+﻿@model IEnumerable<CxC.Datos.FCCxCPeriodo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Periodo</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdPeriodo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdAuxiliar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DscPeriodo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FecInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FecFinal)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdPeriodo)
+        </td>
+        @{ 
+            List<CxC.Datos.FCCxCAuxiliar> listaAuxiliar = (List<CxC.Datos.FCCxCAuxiliar>)ViewBag.Auxiliar;
+            int idTipoIdent = item.IdAuxiliar ;
+            string dscIdAuxiliar = listaAuxiliar.FirstOrDefault(a => a.IdAuxiliar  == idTipoIdent).DscAuxiliar.ToString();
+        }
+        <td>
+            @*@Html.DisplayFor(modelItem => item.IdAuxiliar)*@
+            @Html.DisplayFor(modelItem => dscIdAuxiliar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DscPeriodo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FecInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FecFinal)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdPeriodo  }) |
+            @Html.ActionLink("Detalle", "Details", new {  id=item.IdPeriodo  }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.IdPeriodo  })
+        </td>
+    </tr>
+}
+
+</table>

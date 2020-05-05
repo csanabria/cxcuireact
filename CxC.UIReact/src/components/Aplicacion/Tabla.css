@@ -1,0 +1,112 @@
+body {
+color: #666;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 20px 10px;
+}
+.toggleExpandIcon {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+thead {
+   background: #f8f8f8;
+}
+ 
+.pagination {
+    margin: '0px';
+    float: 'right';
+}
+
+.icono {
+  padding: 0 0 0 5px;
+  margin: 0px 0;
+  width: 30px;
+}
+
+/*Ajustes a tabla*/
+
+.table_responsiva {
+  overflow: auto;
+  table-layout: auto !important;
+}
+
+.table_adaptable {
+  table-layout: auto !important;
+}
+
+.contenedor22 {
+  width: 80%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*Search*/
+.react-bs-table-search-form .my-custom-class  {
+  float: right;
+}
+
+/*Tabla*/
+.table-striped > tbody > tr:nth-child(2n) > td, .table-striped > tbody > tr:nth-child(2n) > th {
+  background-color: white;
+}
+
+/*
+.tbPrincipal > .table-striped > tbody > tr:nth-child(2n) > td, .tbPrincipal > .table-striped > tbody > tr:nth-child(2n) > th {
+  background-color: white;
+}
+*/
+/*
+.react-bootstrap-table{
+  overflow-x:auto !important;
+  }
+
+.react-bootstrap-table table {
+  table-layout: auto;
+}
+*/
+/*
+.show.react-bs-table-sizePerPage-dropdown ul:last-child {
+    display: block;
+  }
+*/
+/*.react-bs-table table td, .react-bs-table table th {
+    white-space: normal;
+    text-overflow: initial;
+    overflow: auto;
+    word-break: break-word;
+}
+*/
+.td2 {
+    width: 5px;
+    word-break: break-word;
+  }
+
+.div_linea{
+    /*width: 100px;*/
+    display: inline-block;
+}
+
+.div_largo2 {
+    width: 100%;
+    background-color: white;
+  }
+
+.tabla_td2 {
+    width: 300px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    background-color: red;
+  }
+  .tabla_td 
+  {
+    width: 100px;
+    Padding:0px 0px;
+    /*background-color: red;*/
+  }

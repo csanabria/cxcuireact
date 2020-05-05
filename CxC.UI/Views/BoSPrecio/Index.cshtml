@@ -1,0 +1,85 @@
+﻿@model IEnumerable<CxC.Datos.FCCxCBoSPrecio>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista</h2>
+
+<p>
+    @Html.ActionLink("Crear", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdBoSPrecio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdBoS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MonPrecio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MonCosto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumPeriodo)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.FecCreacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsrCreacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FecUltModif)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsrUltModif)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdBoSPrecio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdBoS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonPrecio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonCosto)
+        </td>
+        <td>
+            @{ 
+                List< CxC.Datos.FCCxCPeriodo> periodo = ViewBag.Periodo;
+                string dscPeriodo = periodo.FirstOrDefault(a => a.IdPeriodo  == item.NumPeriodo).DscPeriodo.ToString();
+            }
+            @Html.Label(dscPeriodo)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.FecCreacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsrCreacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FecUltModif)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsrUltModif)
+        </td>*@
+        <td>
+            @Html.ActionLink("Editar", "Edit", new {  id=item.IdBoSPrecio  }) |
+            @Html.ActionLink("Detalle", "Details", new { id = item.IdBoSPrecio }) |
+            @Html.ActionLink("Borrar", "Delete", new { id = item.IdBoSPrecio })
+        </td>
+    </tr>
+}
+
+</table>

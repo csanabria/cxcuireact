@@ -1,0 +1,111 @@
+﻿@model IEnumerable<CxC.Datos.FCCxCSocio>
+
+@{
+    ViewBag.Title = "Socio";
+}
+
+<h2>Socio</h2>
+
+<!-- Single button -->
+<div class="btn-group margin-bottom-3px">
+    @*<button type="button" class="btn btn-primary">
+        Nuevo <span class="glyphicon glyphicon-plus-sign"></span>
+    </button>*@
+    @Html.ActionLink("Nuevo", "Create")
+</div>
+<br/>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Num_Identificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_TipoIdentif)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Num_Identificacion2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dsc_NombreSocio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_TipoSocio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email_Socio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.num_CelularSocio)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Num_Identificacion)
+            </td>
+            @{
+
+
+                List<CxC.Datos.FCCxCIdentificacionTipo> listaTipoIdentificacion = (List<CxC.Datos.FCCxCIdentificacionTipo>)ViewBag.listaTipoIdentificacion;
+                int idTipoIdent = item.Id_TipoIdentif;
+                string dscTipoIdentificacion = listaTipoIdentificacion.FirstOrDefault(a => a.Id_TipoIdentif == idTipoIdent).Dsc_TipoIdentif.ToString();
+
+                List<CxC.Datos.FCCxCSocioTipo> listaTipoSocio = (List<CxC.Datos.FCCxCSocioTipo>)ViewBag.listaTipoSocio;
+                int idTipoSocio = item.Id_TipoSocio;
+                string dscTipoSocio = listaTipoSocio.FirstOrDefault(a => a.IdTipoDeudor == idTipoSocio).DscTipoDeudor.ToString();
+
+            }
+            <td>
+                @Html.DisplayFor(modelItem => dscTipoIdentificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Num_Identificacion2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dsc_NombreSocio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => dscTipoSocio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email_Socio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.num_CelularSocio)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.num_TelefonoSocio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dsc_Info1Socio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dsc_Info2Socio)
+            </td>*@
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Fec_Creacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Usr_Creo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fec_UltModif)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Usr_UltModif)
+                </td>*@
+            <td>
+                <div class="row col-md-6">
+                    @Html.ActionLink(" ", "Edit", new { id = item.Id_Socio }, new { @class = "glyphicon glyphicon-edit botonImagen col-md-1", title = "Editar" })
+                    @Html.ActionLink(" ", "Details", new { id = item.Id_Socio }, new { @class = "glyphicon glyphicon-search botonImagen col-md-1", title = "Ver detalles" })
+                    @Html.ActionLink(" ", "Delete", new { id = item.Id_Socio }, new { @class = "glyphicon glyphicon-remove botonImagen text-danger col-md-1", title = "Eliminar" })
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,40 @@
+﻿@model CxC.Datos.FCCxCEstadoPago
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Borrar</h2>
+
+<h3>Esta seguro que desea borrar este registro?</h3>
+<div>
+    <h4>Estado de Pago</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdEstadoPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdEstadoPago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DscEstadoPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DscEstadoPago)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
