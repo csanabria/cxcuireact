@@ -1,5 +1,0 @@
-[
-    { "IdSolicitanteLicencias": "1","IdEntidad": "1","Entidad": "Entidad","IdLicencia": "1", "IdPersona":"1","NombreContacto": "Juan","CorreoContacto": "juan@itcr.ac.cr","TelefonoContacto": "1111111","IdEstado": "1","Estado": "Activo","SolicitudPrimaria": "1"},
-    { "IdSolicitanteLicencias": "2","IdEntidad": "2","Entidad": "Entidad 2","IdLicencia": "2", "IdPersona":"2","NombreContacto": "Pedro","CorreoContacto": "pedro@itcr.ac.cr","TelefonoContacto": "22222222","IdEstado": "1","Estado": "Activo","SolicitudPrimaria": "0"},
-    { "IdSolicitanteLicencias": "3","IdEntidad": "2","Entidad": "Entidad 3","IdLicencia": "3", "IdPersona":"3","NombreContacto": "Maria","CorreoContacto": "maria@itcr.ac.cr","TelefonoContacto": "22222222","IdEstado": "2","Estado": "Inactivo","SolicitudPrimaria": "0"}
-  ]

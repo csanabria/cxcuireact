@@ -1,0 +1,133 @@
+.letra-normal
+{
+  font-size: 14px;
+}
+
+.styleLogin {
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 5em;
+}
+
+.styleNombreApp {
+    color: #005085;
+    font: bold;
+    font-weight: bold;
+    text-align: center;
+}
+
+styleLogo {
+    display : block;
+    background-image: url('../Content/img/banner-logueo.png');
+    height: 100px !important;
+    width: '500px';
+    border-radius: 3px;
+    box-shadow: "0 14px 18px 0 rgba(0; 0; 0; 0.2); 0 6px 20px 0 rgba(0; 0; 0; 0.19)"
+}
+
+.btn
+  {
+    font-size: 14px;
+  }
+  
+/* .center-div-login
+{
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 600px;
+  height: 300px;
+  background-color: var(--color-blanco);
+  border-radius: 3px;
+  border-color: darkblue;
+} */
+
+/* Inicio Estilos de animación "cargando..." */
+
+.centradoHV {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* background-color: red;  para probar que funcione. Le pone rojo alrededor */
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-ring div {
+  margin-top: 200px;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid rgb(151, 27, 27);
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: rgb(25, 25, 255) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Fin estilos de animación cargando */
+
+input[type=text] {
+  width:250px   !important;
+  height: 40px;
+  font-size:18px;
+  font-family:'handwriting', 'sans-serif';
+}
+input[type=password] {
+  width:250px   !important;
+  height: 40px;
+  font-size:18px;
+  font-family:'handwriting', 'sans-serif';
+  padding: 5px;
+  
+}
+
+.componente_input {
+  margin-left: 70px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  margin-right: 5px;
+}
+
+.componente_button {
+  margin-left: 190px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.ImagenIcono
+{
+    margin-top: 5px;
+    margin-left: 0px;
+    text-align:center;
+    /*margin-left:-60px;
+    margin-top: 5px;
+    margin-left:20%;*/
+} 

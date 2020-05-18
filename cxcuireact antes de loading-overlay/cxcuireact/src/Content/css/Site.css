@@ -1,0 +1,790 @@
+﻿@media(min-width:0px) {
+    body {
+        padding-top: 100px;
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+    }
+
+    .breadcrumb {
+        margin-top: 30px;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
+
+.navbar-toggler-icon {
+    background-color: red;
+    color: #FFF;
+}
+/* estilos disponibles pero aún sin uso */
+.toggleTec {
+    position: fixed;
+    height: 20px;
+    width: 50px;
+    margin-left: 2%;
+}
+
+.tituloTabla {
+    border-bottom: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #005085;
+    border-top: solid !important;
+    border-top-width: thin !important;
+    border-top-color: #005085 !important;
+}
+
+.tituloSeccion {
+    border-radius: 0px;
+    background-color: #005085;
+    color: white;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.nombreAppPortal {
+    color: #005085;
+    /* margin-top: 20px; */
+}
+
+.nombreAppPortal > h3 {
+    color: #005085;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.oculto {
+    display: none;
+}
+
+.table td {
+    text-align: center;
+}
+
+.table th {
+    text-align: center;
+}
+
+.padButton {
+    margin-top: 12px;
+}
+
+.padButtonBuscar {
+    margin-left: 15px;
+}
+
+.padButtonCrearCategoria {
+    margin-left: 25px;
+}
+
+.popupmodal {
+    background: #47A447 !important;
+    border-radius: 4px;
+    color: white;
+}
+
+.popupmodalFallido {
+    background: #C9302C !important;
+    border-radius: 4px;
+    color: white;
+}
+
+.popupmodalAviso {
+    background: #EC971F !important;
+    border-radius: 4px;
+    color: white;
+}
+
+.popupmodalBlue {
+    background: #005085 !important;
+    border-radius: 4px;
+    color: white;
+}
+
+.popupmodalConfirmacion {
+    background: #005085 !important;
+    border-radius: 4px;
+    color: white;
+}
+
+.posicionDerecha {
+    float: right;
+}
+
+.colpad {
+    margin: 0px;
+}
+
+.btn-generado {
+    background-color: hsl(218, 59%, 25%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#386ecb", endColorstr="#1a3565");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#386ecb), to(#1a3565));
+    background-image: -moz-linear-gradient(top, #386ecb, #1a3565);
+    background-image: -ms-linear-gradient(top, #386ecb, #1a3565);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #386ecb), color-stop(100%, #1a3565));
+    background-image: -webkit-linear-gradient(top, #386ecb, #1a3565);
+    background-image: -o-linear-gradient(top, #386ecb, #1a3565);
+    background-image: linear-gradient(#386ecb, #1a3565);
+    border-color: #1a3565 #1a3565 hsl(218, 59%, 18.5%);
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.42);
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-generadoNew {
+    background: #005085 !important;
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.42);
+}
+
+.btn-generado:hover {
+    background-color: hsl(218, 59%, 24%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#759adb", endColorstr="#193361");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#759adb), to(#193361));
+    background-image: -moz-linear-gradient(top, #759adb, #193361);
+    background-image: -ms-linear-gradient(top, #759adb, #193361);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #759adb), color-stop(100%, #193361));
+    background-image: -webkit-linear-gradient(top, #759adb, #193361);
+    background-image: -o-linear-gradient(top, #759adb, #193361);
+    background-image: linear-gradient(#759adb, #193361);
+    border-color: #193361 #193361 hsl(218, 59%, 13.5%);
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.69);
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-generadoElim {
+    background-color: hsl(0, 86%, 25%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ed1616", endColorstr="#760808");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#ed1616), to(#760808));
+    background-image: -moz-linear-gradient(top, #ed1616, #760808);
+    background-image: -ms-linear-gradient(top, #ed1616, #760808);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ed1616), color-stop(100%, #760808));
+    background-image: -webkit-linear-gradient(top, #ed1616, #760808);
+    background-image: -o-linear-gradient(top, #ed1616, #760808);
+    background-image: linear-gradient(#ed1616, #760808);
+    border-color: #760808 #760808 hsl(0, 86%, 18.5%);
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.42);
+    -webkit-font-smoothing: antialiased;
+}
+
+    .btn-generadoElim:hover {
+        background-color: hsl(0, 86%, 30%) !important;
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f25454", endColorstr="#8e0a0a");
+        background-image: -khtml-gradient(linear, left top, left bottom, from(#f25454), to(#8e0a0a));
+        background-image: -moz-linear-gradient(top, #f25454, #8e0a0a);
+        background-image: -ms-linear-gradient(top, #f25454, #8e0a0a);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f25454), color-stop(100%, #8e0a0a));
+        background-image: -webkit-linear-gradient(top, #f25454, #8e0a0a);
+        background-image: -o-linear-gradient(top, #f25454, #8e0a0a);
+        background-image: linear-gradient(#f25454, #8e0a0a);
+        border-color: #8e0a0a #8e0a0a hsl(0, 86%, 21.5%);
+        color: #fff !important;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.56);
+        -webkit-font-smoothing: antialiased;
+    }
+
+.btn-ir {
+    background-color: hsl(125, 51%, 26%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3bb846", endColorstr="#206426");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#3bb846), to(#206426));
+    background-image: -moz-linear-gradient(top, #3bb846, #206426);
+    background-image: -ms-linear-gradient(top, #3bb846, #206426);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3bb846), color-stop(100%, #206426));
+    background-image: -webkit-linear-gradient(top, #3bb846, #206426);
+    background-image: -o-linear-gradient(top, #3bb846, #206426);
+    background-image: linear-gradient(#3bb846, #206426);
+    border-color: #206426 #206426 hsl(125, 51%, 20.5%);
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.36);
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-irVerde {
+    background-color: #00853E !important;
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.42);
+    transition: all .2s ease-in-out;
+}
+
+.hoverShadowGenerado:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.42);
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+
+.hoverShadowBuscar:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.42);
+    border: solid;
+    border-width: thin;
+    border-color: black;
+}
+
+.btn-Elim {
+    background-color: #B50000 !important;
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.42);
+}
+
+.btn-ir:hover {
+    background-color: hsl(125, 51%, 28%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#64cd6d", endColorstr="#226b29");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#64cd6d), to(#226b29));
+    background-image: -moz-linear-gradient(top, #64cd6d, #226b29);
+    background-image: -ms-linear-gradient(top, #64cd6d, #226b29);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #64cd6d), color-stop(100%, #226b29));
+    background-image: -webkit-linear-gradient(top, #64cd6d, #226b29);
+    background-image: -o-linear-gradient(top, #64cd6d, #226b29);
+    background-image: linear-gradient(#64cd6d, #226b29);
+    border-color: #226b29 #226b29 hsl(125, 51%, 20%);
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.52);
+    -webkit-font-smoothing: antialiased;
+}
+
+.selectorHora {
+    margin-top: 5px;
+}
+
+.selectorSwitcher {
+    margin-top: 2px;
+}
+
+.selectorFecha {
+    margin-left: 6%;
+}
+
+.bordeTop {
+    border-top: 1px solid black;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+.espacioCalendario {
+    margin-top: 2%;
+}
+
+/* .loadingImg {
+    background-image: url("img/img/loading.gif");
+} */
+
+.buscadorCategorias {
+    border: solid;
+    border-width: thin;
+    border-color: #005085;
+}
+
+.txtNombreCategoria {
+    margin-right: 10px;
+}
+
+.breadBold {
+    font-weight: bold;
+}
+
+.navCollapse {
+    background: #2185a0;
+    border-radius: 4px;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+    .navCollapse a {
+        color: white !important;
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        font-weight: bold;
+        text-decoration: none !important;
+    }
+
+        .navCollapse a:hover {
+            text-decoration: none !important;
+        }
+
+.navPeriodo {
+    margin-top: 10px;
+}
+
+.togCollapse {
+    margin-right: 10px;
+}
+
+.fc-event {
+    background-color: #3a87ad !important;
+}
+
+.modal {
+    text-align: center;
+    padding: 0 !important;
+}
+
+    .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+span.fc-title {
+    cursor: pointer;
+}
+
+.fc-content {
+    cursor: pointer;
+}
+
+.letraCentrado {
+    text-align: center;
+}
+
+.tituloLogueo {
+    color: #005085;
+}
+
+.bordeadoLogin {
+    border-bottom: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #005085;
+}
+
+.margenlogueo {
+    margin-top: 10px;
+}
+
+.centradoLoginDiv {
+    margin-top: 10%;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.altoHeader {
+    height: 80px;
+}
+
+.nombreUsuarioSpan a:hover {
+    color: white !important;
+}
+
+.paginaInvalidaMargen {
+    margin-top: 40px;
+}
+
+.posicionPaginado {
+    border-top: solid;
+    border-color: #005085;
+    border-width: thin;
+    margin-top: 1px;
+}
+
+.contenedorLogueo .container {
+    max-width: 800px;
+    margin-top: 10%;
+}
+
+.bordesTitulo {
+    border-radius: 2px;
+}
+
+#datosLogueo {
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+.labelTotalRegistros {
+    width: 95%;
+}
+
+.rowTotalRegistros p {
+    margin-top: 6%;
+    font-size: 12px;
+}
+
+.categoriasMantenimiento {
+    overflow-y: auto !important;
+    height: 500px !important;
+}
+
+.usuariosMantenimiento {
+    overflow-y: auto !important;
+    height: 250px !important;
+}
+
+.campoPassword {
+    width: 93%;
+    margin-left: 4%;
+}
+
+.passwordSpan {
+    margin-left: 4%;
+}
+
+.selectedRowTable {
+    background-color: steelblue;
+}
+
+.estadoBuscarCat {
+    margin-top: 9%;
+}
+
+.btnIrMigracion {
+    margin-top: 10px;
+    float: right;
+}
+
+.switchMigracion {
+    margin-left: 47% !important;
+}
+
+.tablaUsuariosNotificar {
+    border-left-color: darkblue;
+    border-left-width: thin;
+    border-left-style: inset;
+}
+
+.inhabilitarLink {
+    pointer-events: none;
+    cursor: default;
+}
+
+.evSedeBusqueda {
+    margin-top: 25px;
+}
+
+
+.divLeft {
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-left: 57px;
+    float: left;
+    position: relative;
+    width: 45%;
+    height: auto;
+}
+
+.divRight {
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    position: relative;
+    float: left;
+    width: 45%;
+    height: auto;
+}
+
+.enLinea {
+    display: inline-block;
+}
+
+.vineta {
+    position: relative;
+    top: -24px;
+    font-size: large;
+}
+
+.divLeftLargo {
+    /*padding-left: 10px;*/
+    padding-top: 10px;
+    /*margin-left: 57px;*/
+    float: left;
+    position: relative;
+    width: 70%;
+    height: auto;
+}
+
+.divRightCorto {
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    position: relative;
+    float: left;
+    width: 28%;
+    height: auto;
+}
+
+.error {
+    border: solid red 1px;
+}
+
+
+.wide-100 {
+    width: 100%;
+}
+
+.tituloInicio {
+    background-image: linear-gradient(-180deg, #FFFFFF 65%, #CCD9E4 100%);
+    border: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    color: #005085;
+    font-weight: bold;
+    margin-bottom: 0px !important;
+    padding: 5px 0px 0px 27px !important;
+    text-align: center;
+}
+
+.box {
+    height: 200px;
+    border: 10px solid transparent;
+    border-image: linear-gradient(to bottom right, #FFFFFF 65%, #CCD9E4 100%);
+    border-image-slice: 1;
+}
+
+.dropdown-menu > li > a {
+    background: whitesmoke;
+    color: #005085 !important;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #1a3565;
+}
+
+.dropdown-menu {
+    background-color: #f5f5f5;
+}
+
+
+.accordion-container {
+    width: 100%;
+    margin: 0 0 20px;
+    clear: both;
+}
+
+.fast .toggle-group {
+    transition: left 0.1s;
+    -webkit-transition: left 0.1s;
+}
+
+.selected {
+    background-color: #CCD9E4 !important;
+    font-weight: bold;
+}
+
+.colorError {
+    color: #FF0004;
+}
+
+.colorValido {
+    color: #00A41E;
+}
+
+
+
+
+/**Estilo de Acordion*/
+body {
+    padding: 50px;
+    background: #fff;
+}
+
+.estiloAcordion {
+    background-image: linear-gradient(-180deg, #FFFFFF 65%, #CCD9E4 100%);
+    border: 1px solid #8BA2BD;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 0px !important;
+    padding: 5px 0px 0px 27px !important;
+    text-align: left;
+}
+
+.tituloacordion h2, h3, h4 {
+    margin-top: 2px;
+    margin-bottom: 1px;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+@media(max-width:992px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+.panel-heading {
+    padding: 0;
+    border: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.panel-title > a, .panel-title > a:active {
+    display: block;
+    padding: 15px;
+    color: #005085;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-decoration: none;
+}
+
+.panel-heading a:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e114";
+    color: #005085;
+    float: right;
+    transition: all 0.5s;
+}
+
+.panel-heading.active a:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.panel-group .panel + .panel {
+    margin-top: 0;
+}
+/**Estilo de Acordion*/
+
+/**Tamaño de container en tamaños de pantalla mayores a 1200*/
+@media screen and (min-width: 1200px) and (max-width: 2000px) {
+    .container {
+        width: 90%;
+    }
+}
+
+
+#imgLogTec {
+    background-image: url('../img/banner-logueo.png');
+    height: 100px !important;
+    border-radius: 3px;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#datosLogueo a {
+    cursor: pointer !important;
+}
+
+
+.Cabeceraheader{
+    background:#004379;
+    height:52px;
+}
+
+.CabeceraSistema {
+    background:#ffffff;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,0.20);        
+    text-align:center;
+    margin-top:2px;
+}
+
+.ImagenCabecera
+{
+    text-align:center;
+    /*margin-left:-60px;
+    margin-top: 5px;*/
+    margin-left:20%;
+}     
+
+.ImagenUsuario{
+    border-radius:100%;
+    width:36px;
+    height:36px;    
+}
+.CuadroPerfil{
+    /*margin-right:67px;
+    margin-top:-45px;*/
+    background-color: white;
+    /* align-content: center; */
+    margin: 7px -80px 0 auto;
+    position: absolute;
+}
+
+.CuadroPerfil div{
+    width: 150px;
+    margin: 10px auto;
+}
+
+.btn_Perfil {
+    color: #005085 !important;
+    margin: 10px auto;
+}
+
+.PosicionImagenUsuario{
+    float:left;
+    margin-top:8px;
+    margin-left:15px;
+}
+
+.PosicionMenu{
+    float:left;
+    margin-top:-13px
+}
+
+.NombreUsuario{
+    width: 180px;
+    display: block;
+    margin: 5px auto;
+}
+
+.NombreUsuario a {
+    font-style: normal;
+    color: white !important;
+    display: block;
+    width: 150px;
+    margin: 5px auto;
+}
+
+.divCentro
+{
+    position:absolute;
+    top:50%;
+    left:40%;
+    width:600px;
+    margin-left:-200px;
+    height:450px;
+    margin-top: -400px;
+    padding:5px;
+}
+
+
+.LetraPaneles{
+    display: block;
+    padding: 15px;
+    color: #005085;
+    font-size:16px;
+    font-weight: bold;
+    text-decoration:none;
+}
+
+
+.modal-open, .navbar-fixed-top, .navbar-fixed-bottom {
+    margin-right: 0px !important;
+}
+
+.modal {
+    overflow-y: hidden !important;
+}
