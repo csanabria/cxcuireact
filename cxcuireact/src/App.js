@@ -27,6 +27,9 @@ import MantTiposIdentificacionSocio from './components/Aplicacion/Mantenimientos
 import MantSociosNegocio from './components/Aplicacion/Mantenimientos/MantSociosNegocio'
 import './App.css';
 
+/*
+Repo privado: 
+*/
 
 function App() {
   //ESTADO LOCAL
