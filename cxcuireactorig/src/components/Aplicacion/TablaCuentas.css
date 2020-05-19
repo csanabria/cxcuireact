@@ -1,0 +1,22 @@
+.iconoAccion {
+    margin: 10px;
+    color: royalblue;
+}
+
+.iconoAccion:hover {
+    background-color: royalblue;
+    color: #FFF;;
+}
+
+.tablaCuentas {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: bisque;
+    width: 600px;
+    padding: 12px;
+    margin: 10px 0px;
+    font-family:'handwriting', 'sans-serif';  
+    font-size: 20px;
+    z-index:100;
+  }

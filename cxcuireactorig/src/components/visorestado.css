@@ -1,0 +1,63 @@
+.fijoDerechaTop {
+    position: absolute;
+    position: fixed;
+    overflow:auto;
+    overflow-y: auto;
+    top:var(--alto-encabezado);
+    overflow:auto;
+    overflow-y: auto;
+    right:0;
+    width:500px;
+    width:30%;
+    background-color: khaki;
+    z-index: 1000;
+}
+
+.fijoIzquierdaTop {
+    position: absolute;
+    position: fixed;
+    overflow:auto;
+    overflow-y: auto;
+    top:var(--alto-encabezado);
+    left:0;
+    width:500px;
+    background-color: khaki;
+    height:600px;
+    width:30%;
+    border:solid 2px orange;
+    overflow:scroll;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    z-index: 1000;
+}
+.fijoDerechaBottom {
+    position: absolute;
+    position: fixed;
+    overflow:auto;
+    overflow-y: auto;
+    bottom: 0;
+    right:0;
+    width:500px;
+    background-color: khaki;
+    height:600px;
+    width:30%;
+    border:solid 2px orange;
+    overflow:scroll;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    z-index: 1000;
+}
+.fijoIzquierdaBottom {
+    left: 0;
+    position: absolute;
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(140, 203, 240); 
+    height:600px;
+    width:30%;
+    border:solid 2px orange;
+    overflow:scroll;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    z-index: 1000;
+}

@@ -1,0 +1,6 @@
+[
+    { "id": "1","name": "Activo"},
+    { "id": "2","name": "Inactivo"},
+    { "id": "3","name": "Por Vencer"},
+    { "id": "4","name": "En Proceso de Renovación"}
+  ]

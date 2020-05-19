@@ -1,0 +1,9 @@
+{
+    "nombreSocio": "John Smith",
+    "imgURL": "http://lorempixel.com/100/100/",
+    "cuentas": [
+        {"id":1000, "fecha":"1/2/2020", "concepto":"Matrícula II-S-2020", "monto": 55000,"estado": "Pendiente"},
+        {"id":1001, "fecha":"1/2/2020", "concepto":"Seguro Estudiantil", "monto": 12000, "estado": "Pendiente"},
+        {"id":1002, "fecha":"1/5/2020", "concepto":"Soda", "monto": 5100, "estado": "Pendiente"}
+    ]
+}
