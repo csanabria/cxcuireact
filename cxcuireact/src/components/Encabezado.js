@@ -49,6 +49,9 @@ const Encabezado = (props) => {
                         <Navbar expand="sm" className="menu">
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <Navbar.Collapse id="basic-navbar-nav">
+                                <Nav>
+                                    <Link to="/inicio">Inicio</Link>
+                                </Nav>
                                 <Nav className="mr-auto">
                                     <NavDropdown title="General" id="basic-nav-dropdown">
                                         <NavDropdown.Item className="itemMenu" onClick={salir}>Salir</NavDropdown.Item>
@@ -57,18 +60,19 @@ const Encabezado = (props) => {
                                         <NavDropdown.Item className="itemMenu" href="/GenerarCuenta">Generar Cuenta por Cobrar</NavDropdown.Item>
                                         <NavDropdown.Item className="itemMenu" href="/PagoCuenta">Pago de Cuenta por Cobrar</NavDropdown.Item>
                                         <NavDropdown title="Datos Cuentas por Cobrar" id="basic-nav-dropdown">
-                                            <NavDropdown.Item className="itemMenu"> <Link to="/Mantenimientos/Periodos">Periodos</Link></NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu"> <Link to="/Mantenimientos/Auxiliares">Auxiliares</Link></NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu"> <Link to="/Mantenimientos/EstadosCuentaMaestro">Estados de cuenta maestro</Link></NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu"> <Link to="/Mantenimientos/Conceptos">Conteptos</Link></NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu"> <Link to="/Mantenimientos/Impuestos">Impuestos para bienes y servicios (IVA)</Link></NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu"> <Link to="/Mantenimientos/UnidadesMedida">Unidades de medida</Link></NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu"> <Link to="/Mantenimientos/BienesoServicios">Bienes o servicios</Link></NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu"> <Link to="/Mantenimientos/Precios">Precios de bienes y servicios</Link></NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu"> <Link to="/Mantenimientos/FormasPago">Formas de pago</Link></NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu"> <Link to="/Mantenimientos/TiposSocio">Tipos de socios</Link></NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu"> <Link to="/Mantenimientos/TiposIdentificacionSocio">Tipos de identificación de socios</Link></NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu"> <Link to="/Mantenimientos/SociosNegocio">Socios de negocios</Link></NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/Periodos">Periodos</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/Auxiliares">Auxiliares</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/Auxiliares">Auxiliares</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/EstadosCuentaMaestro">Estados de cuenta maestro</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/Conceptos">Conteptos</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/Impuestos">Impuestos para bienes y servicios (IVA)</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/UnidadesMedida">Unidades de medida</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/BienesoServicios">Bienes o servicios</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/Precios">Precios de bienes y servicios</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/FormasPago">Formas de pago</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/TiposSocio">Tipos de socios</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/TiposIdentificacionSocio">Tipos de identificación de socios</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/SociosNegocio">Socios de negocios</NavDropdown.Item>
                                         </NavDropdown>
                                     </NavDropdown>
                                     <NavDropdown title="Facturación Electrónica" id="basic-nav-dropdown">
