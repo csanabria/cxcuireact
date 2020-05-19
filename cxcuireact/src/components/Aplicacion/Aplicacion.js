@@ -1,4 +1,4 @@
-import React, {useState, useContext, useHistory} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import {Navbar, Nav, NavDropdown, Button} from 'react-bootstrap'
 import { House } from 'react-bootstrap-icons';
@@ -12,15 +12,10 @@ import './Aplicacion.css';
 import { Breadcrumb } from 'react-bootstrap';
 
 const Aplicacion = (props) => {
-    //const history = useHistory();
-
-
     const {estadoApp, setEstadoApp} = useContext(AppContext);
-
     const {usuarioValido, modoDesarrollo} = estadoApp;
 
-
-    const estadoLocal = {}
+    const [estadoLocal, setEstadoLocal] = useState({});
 
     //TODO: moverla a app y pasarla como prop acá y a encabezado
     //función para salir
@@ -31,8 +26,13 @@ const Aplicacion = (props) => {
         //no va a funcionar hasta eliminarla y pasarla en props
         //history.push("/");
     }
-
-    //debugger;
+    useEffect(() => {
+        setEstadoApp({
+            ...estadoApp,
+            modoDesarrollo : estadoAppInicial.modoDesarrollo
+        })
+    }, [])
+    
     return (
         <div className="estiloAplicacion">
             <IdleTimeContainer salir={salir} />
@@ -41,7 +41,6 @@ const Aplicacion = (props) => {
                 (
                     <>
                     <VisorEstado estado={estadoApp} titulo="Estado Global" estilo="fijoDerechaBottom"/>
-                    <VisorEstado estado={estadoLocal} titulo="Estado Local" estilo="fijoIzquierdaBottom"/>
                     </>
                 )
             :

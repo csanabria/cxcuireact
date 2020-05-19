@@ -87,6 +87,8 @@
     <Content Include="src\components\Aplicacion\DatosSocio.js" />
     <Content Include="src\components\Aplicacion\IdleTimeContainer.css" />
     <Content Include="src\components\Aplicacion\IdleTimeContainer.js" />
+    <Content Include="src\components\Aplicacion\Mantenimientos\DetalleMantAuxiliares.js" />
+    <Content Include="src\components\Aplicacion\Mantenimientos\MantAuxiliares.css" />
     <Content Include="src\components\Aplicacion\Mantenimientos\MantAuxiliares.js" />
     <Content Include="src\components\Aplicacion\Mantenimientos\MantBienesoServicios.js" />
     <Content Include="src\components\Aplicacion\Mantenimientos\MantConceptos.js" />
@@ -99,6 +101,9 @@
     <Content Include="src\components\Aplicacion\Mantenimientos\MantTiposIdentificacionSocio.js" />
     <Content Include="src\components\Aplicacion\Mantenimientos\MantTiposSocio.js" />
     <Content Include="src\components\Aplicacion\Mantenimientos\MantUnidadesMedida.js" />
+    <Content Include="src\components\Aplicacion\Mantenimientos\TablaGeneralMant.css" />
+    <Content Include="src\components\Aplicacion\Mantenimientos\TablaGeneralMant.js" />
+    <Content Include="src\components\Aplicacion\Mantenimientos\TablaGeneralMantTable1.js" />
     <Content Include="src\components\Aplicacion\Tabla.css" />
     <Content Include="src\components\Aplicacion\TablaCuentas.css" />
     <Content Include="src\components\Aplicacion\TablaCuentas.js" />

@@ -1,4 +1,5 @@
 .fijoDerechaTop {
+    text-align: left;
     position: absolute;
     position: fixed;
     overflow:auto;
@@ -14,6 +15,7 @@
 }
 
 .fijoIzquierdaTop {
+    text-align: left;
     position: absolute;
     position: fixed;
     overflow:auto;
@@ -31,6 +33,7 @@
     z-index: 1000;
 }
 .fijoDerechaBottom {
+    text-align: left;
     position: absolute;
     position: fixed;
     overflow:auto;
@@ -48,6 +51,7 @@
     z-index: 1000;
 }
 .fijoIzquierdaBottom {
+    text-align: left;
     left: 0;
     position: absolute;
     position: fixed;

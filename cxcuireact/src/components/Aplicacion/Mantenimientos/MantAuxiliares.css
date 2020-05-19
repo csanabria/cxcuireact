@@ -1,0 +1,16 @@
+.TablaMant
+{
+    /* background-color: burlywood; */
+}
+.DetalleMant
+{
+    /* background-color: cyan; */
+    text-align: left;
+}
+.form-label {
+    text-align: left;
+}
+.filaSeleccionada {
+    background-color: lightblue;
+    text-emphasis: bold;
+}

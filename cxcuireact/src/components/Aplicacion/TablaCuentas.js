@@ -1,6 +1,8 @@
-import React, {useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import {Table } from 'react-bootstrap';
 import { ArrowRight, EyeFill } from 'react-bootstrap-icons';
+import AppContext, {estadoAppInicial} from '../../Context/AppContext'
+import VisorEstado from '../VisorEstado'
 
 import './TablaCuentas.css'
 import datosTemp from './datosTemp.json'
@@ -8,20 +10,28 @@ import datosTemp from './datosTemp.json'
 import {BootstrapTable, TableHeaderColumn,SearchField} from 'react-bootstrap-table';
 
 const TablaCuentas = () => {
+  const {estadoApp, setEstadoApp} = useContext(AppContext);
+  const [estadoLocal, setEstadoLocal] = useState({});
+
+  const {modoDesarrollo} = estadoApp;
   useEffect(() => {
     //carga la tabla de cuentas del socio actual
+    fetch('./datosTemp.json').then(response => {
+      //debugger;
+      response.json()
+    })
+    .then(data => {
+      // Work with JSON data here
+      //debugger;
+      setEstadoLocal({
+        data
+      })
+    }).catch(err => {
+      // Do something for an error here
+      console.log("Error Reading data " + err);
+    });
+    //debugger;
   }, [])
-  debugger;
-  fetch('./datosTemp.json').then(response => {
-    console.log(response);
-    return response.json();
-  }).then(data => {
-    // Work with JSON data here
-    console.log(data);
-  }).catch(err => {
-    // Do something for an error here
-    console.log("Error Reading data " + err);
-  });
 
   // funcion para dar formato de fecha
   function dateToDMY(date) {
@@ -36,11 +46,25 @@ const TablaCuentas = () => {
   }
 
   const cuentas = datosTemp.cuentas;
-
+  
+  //setEstadoLocal({cuentas})
+  //setEstadoLocal({a : 1});
+  debugger;
   return (
     <div className="tablaCuentas">
       <h2>Cuentas pendientes</h2>
       <hr/>
+      {(modoDesarrollo)
+            ?
+                (
+                    <>
+                    {/* <VisorEstado estado={estadoApp} titulo="Estado Global" estilo="fijoDerechaBottom"/> */}
+                    <VisorEstado estado={estadoLocal} titulo="Estado Local" estilo="fijoIzquierdaBottom"/>
+                    </>
+                )
+            :
+                (null)
+            }
 
       <Table striped bordered hover>
         <thead>

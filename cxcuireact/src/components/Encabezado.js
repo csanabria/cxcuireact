@@ -15,6 +15,7 @@ const Encabezado = (props) => {
     
     //función para salir
     const salir = () => {
+        //debugger;
         setEstadoApp({
             estadoAppInicial
         })
@@ -62,7 +63,6 @@ const Encabezado = (props) => {
                                         <NavDropdown title="Datos Cuentas por Cobrar" id="basic-nav-dropdown">
                                             <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/Periodos">Periodos</NavDropdown.Item>
                                             <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/Auxiliares">Auxiliares</NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/Auxiliares">Auxiliares</NavDropdown.Item>
                                             <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/EstadosCuentaMaestro">Estados de cuenta maestro</NavDropdown.Item>
                                             <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/Conceptos">Conteptos</NavDropdown.Item>
                                             <NavDropdown.Item className="itemMenu" as={Link} to="/Mantenimientos/Impuestos">Impuestos para bienes y servicios (IVA)</NavDropdown.Item>
@@ -81,19 +81,16 @@ const Encabezado = (props) => {
                                         <NavDropdown.Item className="itemMenu" href="/NotaCredito">Nota de crédito</NavDropdown.Item>
                                         <NavDropdown.Item className="itemMenu" href="/NotaDebito">Nota de débito</NavDropdown.Item>
                                         <NavDropdown title="Datos de facturación electrónica" id="basic-nav-dropdown">
-                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Periodos</NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Estados de cuenta maestro</NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos"></NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Auxiliares</NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Conteptos</NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Impuestos para bienes y servicios (IVA)</NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Unidades de medida</NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Bienes o servicios</NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Precios de bienes y servicios</NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Formas de pago</NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Tipos de socios</NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Tipos de identificación de socios</NavDropdown.Item>
-                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Socios de negocios</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Impuestos de actividad Económica</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">ActividadEconomica</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Condiciones de venta</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Razones de exoneración</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Tipos de referencia</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Monedas y tipos de cambio</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Tipos de documento</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Tipos y tasas de impuesto</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Tipos de otros cargos</NavDropdown.Item>
+                                            <NavDropdown.Item className="itemMenu" href="/CxC/Periodos">Terceros de cobro</NavDropdown.Item>
                                         </NavDropdown>
                                     </NavDropdown>
                                 </Nav>
